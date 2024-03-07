@@ -204,7 +204,7 @@ def startGamming(board, symbol_1, symbol_2, count):
                        "[left column: enter 0, middle column: enter 1, right column enter 2]"))
 
 
-    # Check if players' selection is out of range
+ # Check if players' selection is out of range
     while (row > 2 or row < 0) or (column > 2 or column < 0):
         outOfBoard(row, column)
         row = int(input("Pick a row[upper row:"
@@ -212,7 +212,7 @@ def startGamming(board, symbol_1, symbol_2, count):
         column = int(input("Pick a column:"
                            "[left column: enter 0, middle column: enter 1, right column enter 2]"))
 
-        # Check if the square is already filled
+# Check if the square is already filled
     while (board[row][column] == symbol_1)or (board[row][column] == symbol_2):
         filled = illegal(board, symbol_1, symbol_2, row, column)
         row = int(input("Pick a row[upper row:"
@@ -220,7 +220,7 @@ def startGamming(board, symbol_1, symbol_2, count):
         column = int(input("Pick a column:"
                             "[left column: enter 0, middle column: enter 1, right column enter 2]"))    
         
-    # Locates player's symbol on the board
+# Locates player's symbol on the board
     if player == symbol_1:
         board[row][column] = symbol_1
             
